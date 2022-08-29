@@ -15,3 +15,4 @@ jobs:
           destination_branch: master
           pr_title: D2m
           pr_body: Automated pull request by github action
+          github_token: ${{ secrets.GITHUB_TOKEN }}
