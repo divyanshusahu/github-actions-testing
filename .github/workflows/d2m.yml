@@ -2,7 +2,7 @@ name: dev-to-master-pull-request
 on:
   push:
     branches:
-      - 'dev'
+      - dev
 jobs:
   d2m:
     runs-on: ubuntu-latest
