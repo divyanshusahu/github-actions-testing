@@ -1,0 +1,17 @@
+name: dev-to-master-pull-request
+on:
+  push:
+    branches:
+      - 'dev'
+jobs:
+  d2m:
+    runs-on: ubuntu-latest
+    steps:
+      - name: D2m
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: D2m
+          branch: dev
+          delete-branch: false
+          base: master
+          title: D2m
