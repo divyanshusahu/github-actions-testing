@@ -1,0 +1,17 @@
+name: dev-to-master-pull-request
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  d2m:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: D2m
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: dev
+          destination_branch: master
+          pr_title: D2m
+          pr_body: Automated pull request by github action
