@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo $GH_TOKEN;
+echo "Creating PR";
+gh pr create --base dev --head testing --title testing --body testing;
