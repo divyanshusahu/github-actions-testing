@@ -1,0 +1,19 @@
+name: dev-to-master-pull-request-v2
+on:
+  push:
+    branches:
+      - testing
+jobs:
+  d2m:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: sudo apt-get install -y git gh
+      - name: Run script
+        run: |
+          chmod +x .github/d2m.sh
+          .github/d2m.sh
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
