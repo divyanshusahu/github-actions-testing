@@ -1,4 +1,4 @@
-name: dev-to-master-pull-request
+name: dev-to-master-pull-request-v2
 on:
   push:
     branches:
@@ -12,6 +12,6 @@ jobs:
         run: sudo apt-get install -y git gh
       - name: Run script
         run: |
-          chmod +x d2m.sh
-          ./d2m.sj
+          chmod +x .github/d2m.sh
+          .github/d2m.sh
         shell: bash
